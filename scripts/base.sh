@@ -9,23 +9,23 @@ sudo apt-get update
 sudo apt-get install -y git-core ack-grep vim tmux curl wget build-essential python-software-properties
 
 # Git Config and set Owner
-curl -L https://gist.githubusercontent.com/fideloper/3751524/raw/.gitconfig > /home/vagrant/.gitconfig
+curl -L https://raw.githubusercontent.com/howlowck/dotfiles/master/.gitconfig > /home/vagrant/.gitconfig
 sudo chown vagrant:vagrant /home/vagrant/.gitconfig
 
 echo ">>> Installing *.xio.io self-signed SSL"
 
 SSL_DIR="/etc/ssl/xip.io"
 DOMAIN="*.xip.io"
-PASSPHRASE="vaprobash"
+PASSPHRASE="howlowck"
 
 SUBJ="
 C=US
-ST=Connecticut
-O=Vaprobash
-localityName=New Haven
+ST=Illinois
+O=Howlowck
+localityName=Chicago
 commonName=$DOMAIN
 organizationalUnitName=
-emailAddress=
+emailAddress=haowebdev@gmail.com
 "
 
 sudo mkdir -p "$SSL_DIR"
